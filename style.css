@@ -134,15 +134,13 @@ nav > ul > li > a {
   justify-content: space-evenly;
 }
 
-/* SVG Grid Layout - Updated for subsections */
 .svg-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns for mobile */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-content: flex-start;
 }
 
-/* Individual SVG containers */
 .svg-container {
   display: flex;
   flex-direction: column;
@@ -151,15 +149,15 @@ nav > ul > li > a {
   padding: 1.5rem;
   border-radius: 8px;
   background-color: var(--white);
-  border: 1px solid rgba(233, 208, 244, 0.3); /* Pink border */
+  border: 1px solid rgba(233, 208, 244, 0.3);
   box-shadow: 0 4px 10px rgba(233, 208, 244, 0.35);
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out,
     border-color 0.3s ease-out;
-  height: 100%; /* Ensure consistent height */
+  height: 100%;
 }
 
 .svg-container:hover {
-  transform: translateY(-7px); /* Slightly larger lift */
+  transform: translateY(-7px);
   box-shadow: 0 8px 20px rgba(233, 208, 244, 0.7),
     0 0 0 2px rgba(115, 80, 198, 0.3);
   border-color: var(--pink);
@@ -195,9 +193,54 @@ nav > ul > li > a {
   color: var(--pink);
 }
 
-/* Media Queries for responsiveness */
 /* Small tablets: 3 columns */
 @media (min-width: 576px) {
+  nav {
+    display: none;
+  }
+
+  .text-box {
+    height: 30%;
+    margin-left: 4em;
+  }
+
+  .main-header {
+    font-size: 3rem;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .section-container {
+    padding: 4em 4em;
+    min-height: 50vh;
+  }
+
+  .section-header {
+    font-size: 2.5rem;
+  }
+
+  .subsection-header {
+    font-size: 1.75rem;
+  }
+
+  .section-text {
+    font-size: 1.75rem;
+  }
+
+  .employer-header {
+    font-size: 2.75rem;
+  }
+
+  .job-info {
+    font-size: 1.75rem;
+  }
+
+  .job-achievements {
+    font-size: 1.75rem;
+  }
+
   .svg-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -205,6 +248,18 @@ nav > ul > li > a {
 
 /* Medium tablets: 4 columns */
 @media (min-width: 768px) {
+  .text-box {
+    height: 40%;
+    margin-left: 4em;
+  }
+
+  .main-header {
+    font-size: 4rem;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
   .svg-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -217,6 +272,9 @@ nav > ul > li > a {
 
 /* Smaller desktops: 5 columns */
 @media (min-width: 992px) {
+  nav {
+    display: block;
+  }
   .svg-grid {
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
@@ -225,6 +283,47 @@ nav > ul > li > a {
 
 /* Medium desktops: 6 columns */
 @media (min-width: 1200px) {
+  .text-box {
+    height: 80%;
+    margin-left: 5em;
+  }
+
+  .main-header {
+    font-size: 6rem;
+  }
+
+  .main-text {
+    font-size: 3rem;
+  }
+
+  .section-container {
+    padding: 5em 5em;
+    min-height: 75vh;
+  }
+
+  .section-header {
+    font-size: 3rem;
+  }
+
+  .subsection-header {
+    font-size: 2.5rem;
+  }
+
+  .section-text {
+    font-size: 2.5rem;
+  }
+
+  .employer-header {
+    font-size: 2.75rem;
+  }
+
+  .job-info {
+    font-size: 2.5rem;
+  }
+
+  .job-achievements {
+    font-size: 2.5rem;
+  }
   .svg-grid {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -237,19 +336,52 @@ nav > ul > li > a {
 
 /* Mobile adjustments */
 @media (max-width: 575px) {
-  .section-container {
-    padding: 5em 2em; /* Reduced padding for small screens */
+  nav {
+    display: none;
+  }
+  .text-box {
+    height: 30%;
+    margin-left: 2em;
   }
 
-  .svg-grid {
-    gap: 1.5rem; /* Smaller gap on mobile */
+  .main-header {
+    font-size: 2.5rem;
+  }
+
+  .main-text {
+    font-size: 1.5rem;
+  }
+
+  .section-container {
+    padding: 5em 2em;
+    min-height: 50vh;
   }
 
   .section-header {
-    font-size: 3rem; /* Slightly smaller header for mobile */
+    font-size: 2.5rem;
   }
 
   .subsection-header {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 1.5rem;
+  }
+
+  .employer-header {
+    font-size: 2.75rem;
+  }
+
+  .job-info {
+    font-size: 1.5rem;
+  }
+
+  .job-achievements {
+    font-size: 1.5rem;
+  }
+
+  .svg-grid {
+    gap: 1.5rem;
   }
 }
